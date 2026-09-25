@@ -1,0 +1,21 @@
+[23-Sep-2026 05:50:16 Europe/Berlin] PHP Notice:  session_start(): Ignoring session_start() because a session is already active in C:\xampp\htdocs\t-project\auth\logout.php on line 3
+[23-Sep-2026 18:34:29 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from C:\wamp64\www\t-project\includes\db.php on line 53) in C:\wamp64\www\t-project\auth\logout.php on line 3
+[23-Sep-2026 18:34:29 UTC] PHP Stack trace:
+[23-Sep-2026 18:34:29 UTC] PHP   1. {main}() C:\wamp64\www\t-project\auth\logout.php:0
+[23-Sep-2026 18:34:29 UTC] PHP   2. session_start() C:\wamp64\www\t-project\auth\logout.php:3
+[24-Sep-2026 14:06:29 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from C:\wamp64\www\t-project\includes\db.php on line 53) in C:\wamp64\www\t-project\auth\logout.php on line 3
+[24-Sep-2026 14:06:29 UTC] PHP Stack trace:
+[24-Sep-2026 14:06:29 UTC] PHP   1. {main}() C:\wamp64\www\t-project\auth\logout.php:0
+[24-Sep-2026 14:06:29 UTC] PHP   2. session_start() C:\wamp64\www\t-project\auth\logout.php:3
+[24-Sep-2026 14:08:20 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from C:\wamp64\www\t-project\includes\db.php on line 53) in C:\wamp64\www\t-project\auth\logout.php on line 3
+[24-Sep-2026 14:08:20 UTC] PHP Stack trace:
+[24-Sep-2026 14:08:20 UTC] PHP   1. {main}() C:\wamp64\www\t-project\auth\logout.php:0
+[24-Sep-2026 14:08:20 UTC] PHP   2. session_start() C:\wamp64\www\t-project\auth\logout.php:3
+[24-Sep-2026 14:24:10 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from C:\wamp64\www\t-project\includes\db.php on line 53) in C:\wamp64\www\t-project\auth\logout.php on line 3
+[24-Sep-2026 14:24:10 UTC] PHP Stack trace:
+[24-Sep-2026 14:24:10 UTC] PHP   1. {main}() C:\wamp64\www\t-project\auth\logout.php:0
+[24-Sep-2026 14:24:10 UTC] PHP   2. session_start() C:\wamp64\www\t-project\auth\logout.php:3
+[24-Sep-2026 15:07:10 UTC] PHP Notice:  session_start(): Ignoring session_start() because a session is already active (started from C:\wamp64\www\t-project\includes\db.php on line 53) in C:\wamp64\www\t-project\auth\logout.php on line 3
+[24-Sep-2026 15:07:10 UTC] PHP Stack trace:
+[24-Sep-2026 15:07:10 UTC] PHP   1. {main}() C:\wamp64\www\t-project\auth\logout.php:0
+[24-Sep-2026 15:07:10 UTC] PHP   2. session_start() C:\wamp64\www\t-project\auth\logout.php:3
