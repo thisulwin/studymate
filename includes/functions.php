@@ -17,16 +17,20 @@ function isGuest() {
 }
 
 function requireLogin() {
+    global $basePath;
     if (!isLoggedIn()) {
         $_SESSION['redirect_after_login'] = $_SERVER['REQUEST_URI'];
-        header("Location: /t-project/auth/login.php");
+        $loginUrl = isset($basePath) ? $basePath . 'auth/login.php' : '/studymate/auth/login.php';
+        header("Location: " . $loginUrl);
         exit();
     }
 }
 
 function requireAdmin() {
+    global $basePath;
     if (!isAdmin()) {
-        header("Location: /t-project/index.php");
+        $indexUrl = isset($basePath) ? $basePath . 'index.php' : '/studymate/index.php';
+        header("Location: " . $indexUrl);
         exit();
     }
 }

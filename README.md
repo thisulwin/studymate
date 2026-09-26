@@ -4,19 +4,6 @@ A public academic resource web application designed for university students to a
 
 ---
 
-## Final Submission Requirements & Checklist
-
-This is a one-time, final submission covering the complete project.
-
-1. **Push All Files to GitHub:**
-   - Commit all HTML, CSS, JavaScript, and PHP files, including the `database.sql` export, with meaningful commit messages.
-2. **Clear README:**
-   - Setup instructions detailing how to import the database and run the project using WAMP / XAMPP.
-3. **Submit Repository Link:**
-   - Share the public GitHub repository link to the provided space in Google Classroom before the semester deadline.
-
----
-
 ## Technology Stack
 
 - **Server Environment:** WAMP Server / XAMPP (Apache, MySQL, PHP 8.x)
@@ -60,7 +47,7 @@ This is a one-time, final submission covering the complete project.
 1. **Place Project in WAMP `www` Directory:**
    - Copy or clone this repository into your WAMP `www` folder:
      ```text
-     C:\wamp64\www\t-project\
+     C:\wamp64\www\studymate\
      ```
 
 2. **Start WAMP Services:**
@@ -71,7 +58,7 @@ This is a one-time, final submission covering the complete project.
    - Open your browser and navigate to: `http://localhost/phpmyadmin/`
    - Log in (Default username: `root`, password: leave blank or your configured MySQL password).
    - Click on the **Import** tab at the top.
-   - Click **Choose File** and select `database.sql` from `C:\wamp64\www\t-project\database.sql`.
+   - Click **Choose File** and select `database.sql` from `C:\wamp64\www\studymate\database.sql`.
    - Click **Import** (or **Go**) at the bottom.
    - The `note_platform` database and all sample tables/data will be created automatically.
 
@@ -86,7 +73,7 @@ This is a one-time, final submission covering the complete project.
 5. **Access the Application:**
    - Open your browser and navigate to:
      ```text
-     http://localhost/t-project/
+     http://localhost/studymate/
      ```
 
 ---
@@ -94,7 +81,7 @@ This is a one-time, final submission covering the complete project.
 ### Method B: Running with XAMPP
 
 1. **Place Project in XAMPP `htdocs` Directory:**
-   - Copy or clone the project folder into `C:\xampp\htdocs\t-project\`
+   - Copy or clone the project folder into `C:\xampp\htdocs\studymate\`
 
 2. **Start Apache & MySQL:**
    - Open the **XAMPP Control Panel**.
@@ -105,7 +92,7 @@ This is a one-time, final submission covering the complete project.
    - Click **Import**, select `database.sql`, and execute.
 
 4. **Access the Application:**
-   - Navigate to `http://localhost/t-project/`
+   - Navigate to `http://localhost/studymate/`
 
 ---
 
@@ -114,17 +101,17 @@ This is a one-time, final submission covering the complete project.
 ### Administrator Account
 - **Email:** `admin@studymate.com`
 - **Password:** `admin123`
-- **Access:** Admin panel link appears in profile menu and at `/t-project/admin/index.php`.
+- **Access:** Admin panel link appears in profile menu and at `/studymate/admin/index.php`.
 
 ### Regular Student Account
-- Create a new account via the **Register** button (`/t-project/auth/register.php`), or log in using any registered credentials.
+- Create a new account via the **Register** button (`/studymate/auth/register.php`), or log in using any registered credentials.
 
 ---
 
 ## Project Directory Structure
 
 ```text
-t-project/
+studymate/
 ├── css/
 │   └── style.css          # Main responsive stylesheet
 ├── js/

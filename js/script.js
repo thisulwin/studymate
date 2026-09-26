@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
                 showToast('Please login to use this feature', 'error');
                 setTimeout(() => {
-                    window.location.href = '/t-project/auth/login.php';
+                    window.location.href = 'auth/login.php';
                 }, 1500);
             }
         });

@@ -19,3 +19,8 @@
 [24-Sep-2026 15:07:10 UTC] PHP Stack trace:
 [24-Sep-2026 15:07:10 UTC] PHP   1. {main}() C:\wamp64\www\t-project\auth\logout.php:0
 [24-Sep-2026 15:07:10 UTC] PHP   2. session_start() C:\wamp64\www\t-project\auth\logout.php:3
+[26-Sep-2026 15:37:48 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in C:\wamp64\www\t_project\includes\db.php on line 42
+[26-Sep-2026 15:37:48 UTC] PHP Stack trace:
+[26-Sep-2026 15:37:48 UTC] PHP   1. {main}() C:\Users\acer\.gemini\antigravity\brain\2cb657cb-481e-4c5a-99c3-e980247d1c3c\scratch\test_auto_init.php:0
+[26-Sep-2026 15:37:48 UTC] PHP   2. require_once() C:\Users\acer\.gemini\antigravity\brain\2cb657cb-481e-4c5a-99c3-e980247d1c3c\scratch\test_auto_init.php:7
+[26-Sep-2026 15:37:48 UTC] PHP   3. session_start() C:\wamp64\www\t_project\includes\db.php:42

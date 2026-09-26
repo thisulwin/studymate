@@ -24,26 +24,14 @@ if ($checkDb->num_rows === 0) {
     $conn->select_db(DB_NAME);
 
     $sqlFile = __DIR__ . '/../database.sql';
-    $sqlContent = file_get_contents($sqlFile);
-
-    $lines = explode("\n", $sqlContent);
-    $cleanLines = [];
-    foreach ($lines as $line) {
-        $trimmed = trim($line);
-        if ($trimmed === '' || strpos($trimmed, '--') === 0) {
-            continue;
-        }
-        $cleanLines[] = $line;
-    }
-    $sqlContent = implode("\n", $cleanLines);
-    $sqlContent = str_ireplace('CREATE DATABASE IF NOT EXISTS note_platform;', '', $sqlContent);
-    $sqlContent = str_ireplace('USE note_platform;', '', $sqlContent);
-
-    $statements = array_filter(array_map('trim', explode(';', $sqlContent)));
-
-    foreach ($statements as $stmt) {
-        if (!empty($stmt)) {
-            $conn->query($stmt);
+    if (file_exists($sqlFile)) {
+        $sqlContent = file_get_contents($sqlFile);
+        if ($conn->multi_query($sqlContent)) {
+            do {
+                if ($result = $conn->store_result()) {
+                    $result->free();
+                }
+            } while ($conn->more_results() && $conn->next_result());
         }
     }
 } else {
@@ -57,11 +45,13 @@ if (session_status() === PHP_SESSION_NONE) {
 $siteName = "StudyMate";
 
 $scriptDir = dirname($_SERVER['PHP_SELF']);
-$projectRoot = '/t-project';
-if (strpos($scriptDir, $projectRoot) === 0) {
-    $relative = substr($scriptDir, strlen($projectRoot));
-    $depth = substr_count($relative, '/');
-    $basePath = str_repeat('../', $depth);
-} else {
-    $basePath = '';
+$possibleRoots = ['/studymate', '/StudyMate project', '/StudyMate-project', '/StudyMate_project', '/StudyMate', '/t-project', '/t_project'];
+$basePath = '';
+foreach ($possibleRoots as $pRoot) {
+    if (strpos($scriptDir, $pRoot) === 0) {
+        $relative = substr($scriptDir, strlen($pRoot));
+        $depth = substr_count($relative, '/');
+        $basePath = str_repeat('../', $depth);
+        break;
+    }
 }
